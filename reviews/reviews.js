@@ -21,6 +21,13 @@ const reviews = [
         img: "./20220516_151534.jpg",
         text:"Thumbs up! 👍",
     },
+    {
+      id: 4,
+      Name: "Mohammad Ashfaq",
+      Job: "Nai 😞",
+      img: "./20220502_113336.jpg",
+      text: "Heyyy👋, tumar website dekhte bhalo nah 😂",
+    },
 ];
 
 const img = document.getElementById("person-img");
@@ -36,11 +43,7 @@ let currentItem = 0;
 
 // load initial item
 window.addEventListener("DOMContentLoaded", function () {
-  const item = reviews[currentItem];
-  img.src = item.img;
-  author.textContent = item.name;
-  job.textContent = item.job;
-  info.textContent = item.text;
+  showPerson(currentItem);
 });
 function showPerson(person) {
     const item = reviews[person];
